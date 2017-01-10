@@ -14,6 +14,7 @@ public class BlockState : MonoBehaviour
     private float minSize;
     private Vector3 defaultSize;
     private Vector3 defaultPos;
+    private Quaternion defaultAngle;
 
     void Start ()
     {
@@ -22,12 +23,27 @@ public class BlockState : MonoBehaviour
         minSize = transform.localScale.x * 0.5f;
         defaultPos = transform.position;
         defaultSize = transform.localScale;
-	}
+        defaultAngle = transform.localRotation;
+    }
 	
 	void Update ()
     {
         	
 	}
+
+    public void ResetState()
+    {
+        /*
+        transform.position = defaultPos;
+        transform.localScale = defaultSize;
+        transform.localRotation = defaultAngle;
+        */
+
+        iTween.MoveTo(gameObject, defaultPos, 0.5f);
+        transform.localScale = defaultSize;
+        transform.localRotation = defaultAngle;
+
+    }
 
     public void ChangeMaterialRed()
     {

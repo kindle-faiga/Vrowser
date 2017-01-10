@@ -22,6 +22,8 @@ namespace Leap.Unity
         private Transform rightHandPos;
         [SerializeField]
         private Transform leftHandPos;
+        [SerializeField]
+        private Transform[] pageBlocks;
         //private Quaternion rightRotation;
         //private Quaternion leftRotation;
         private PinchDetector pinchDetectorRight;
@@ -31,9 +33,11 @@ namespace Leap.Unity
         private float rotation_r = 0;
         private float rotation_l = 0;
         private bool isCube = false;
+        private bool isMagnetic = true;
+        private bool isChangeScale = true;
 
         /* updateMode管理用 */
-        public enum updateModes {Default,ChangeScale,MagneticForce,AttractBlock};
+        public enum updateModes {Default,ChangeScale,MagneticForce,AttractBlock,None};
         public int updateMode = (int)updateModes.Default;
 
         /* AttractBlock制御用 */
@@ -63,6 +67,46 @@ namespace Leap.Unity
             */
         }
 
+        public void ResetBlocks()
+        {
+            if(rightHand != null && leftHand != null)
+            {
+                updateMode = (int)updateModes.Default;
+
+                //rightHandState.GetBlock().transform.parent = null;
+
+                //leftHandState.GetBlock().transform.parent = null;
+
+                foreach (Transform block in pageBlocks)
+                {
+                    block.parent = transform;
+                    block.GetComponent<BlockState>().ResetState();
+                }
+
+                //StartCoroutine(WaitForReset());
+            }
+        }
+
+        public void SetMagnetic()
+        {
+            isMagnetic = !isMagnetic;
+        }
+
+        public void SetChangeScale()
+        {
+            isChangeScale = !isChangeScale;
+        }
+
+        public bool GetRightHandPinch()
+        {
+            return pinchDetectorRight.IsPinching;
+        }
+
+        public bool GetLeftHandPinch()
+        {
+            return pinchDetectorLeft.IsPinching;
+        }
+
         public void ChangeCubeScaling()
         {
             isCube = !isCube;
@@ -84,21 +128,24 @@ namespace Leap.Unity
 
         private void ChangeScale(float distance)
         {
-            if (0.01f < distance)
+            if (isChangeScale)
             {
-                //blockState.ChangeScale(0.05f, isCube);
-                GameObject block = rightHandState.GetBlock();
-                if (block != null)
+                if (0.01f < distance)
                 {
-                    block.GetComponent<BlockState>().ChangeScale(0.05f, false);
+                    //blockState.ChangeScale(0.05f, isCube);
+                    GameObject block = rightHandState.GetBlock();
+                    if (block != null)
+                    {
+                        block.GetComponent<BlockState>().ChangeScale(0.05f, false);
+                    }
                 }
-            }
-            else if (distance < -0.01f)
-            {
-                GameObject block = rightHandState.GetBlock();
-                if (block != null)
+                else if (distance < -0.01f)
                 {
-                    block.GetComponent<BlockState>().ChangeScale(-0.05f, false);
+                    GameObject block = rightHandState.GetBlock();
+                    if (block != null)
+                    {
+                        block.GetComponent<BlockState>().ChangeScale(-0.05f, false);
+                    }
                 }
             }
         }
@@ -305,7 +352,7 @@ namespace Leap.Unity
         {
             yield return new WaitForSeconds(0.5f);
 
-            if (pinchDetectorRight.IsPinching && !pinchDetectorLeft.IsPinching)
+            if (isMagnetic && pinchDetectorRight.IsPinching && !pinchDetectorLeft.IsPinching)
             {
                 iTween.MoveTo(blockState.gameObject, rightHand.transform.position, 2.5f);
             }
@@ -315,10 +362,17 @@ namespace Leap.Unity
         {
             yield return new WaitForSeconds(0.5f);
 
-            if(!pinchDetectorRight.IsPinching && pinchDetectorLeft.IsPinching)
+            if(isMagnetic && !pinchDetectorRight.IsPinching && pinchDetectorLeft.IsPinching)
             {
                 iTween.MoveTo(blockState.gameObject, leftHand.transform.position, 2.5f);
             }
+        }
+
+        IEnumerator WaitForReset()
+        {
+            yield return new WaitForSeconds(1.0f);
+
+            updateMode = (int)updateModes.Default;
         }
     }
 }

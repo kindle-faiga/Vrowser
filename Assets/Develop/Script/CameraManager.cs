@@ -7,6 +7,10 @@ namespace Leap.Unity
     {
         [SerializeField]
         private BlockManager blockManager;
+        [SerializeField]
+        private GameObject buttonHand;
+        [SerializeField]
+        private ButtonManager buttonManager;
 
         void OnTriggerEnter(Collider collider)
         {
@@ -23,6 +27,24 @@ namespace Leap.Unity
             if (collider.tag == "Block")
             {              
                 collider.gameObject.GetComponent<BlockState>().ResetMaterialGreen();
+            }
+        }
+
+        void Update()
+        {
+            if(buttonHand.activeSelf)
+            {
+                float distance = Vector3.Distance(transform.position, buttonHand.transform.position);
+                //Debug.Log(distance);
+
+                if(distance < 0.4f && !blockManager.GetLeftHandPinch())
+                {
+                    buttonManager.SetButton();
+                }
+                else
+                {
+                    buttonManager.ResetButton();
+                }
             }
         }
     }

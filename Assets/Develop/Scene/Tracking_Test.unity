@@ -375,10 +375,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
   m_PrefabInternal: {fileID: 1595607347}
---- !u!4 &122052991 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 486596, guid: 2276723046d707c4f94d431ceb80ab92, type: 2}
-  m_PrefabInternal: {fileID: 163103842}
 --- !u!114 &135107356 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000012090210466, guid: 2aa010a1e75292e49a24f3f71bb9cddb,
@@ -772,6 +768,45 @@ MonoBehaviour:
   DeactivateDistance: 0.04
   _activatePinchDist: 0.03
   _deactivatePinchDist: 0.04
+--- !u!114 &163846059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 163846057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65cc2c7352848f84496b5fe308b1676c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonManager: {fileID: 1896297670}
+--- !u!65 &163846060
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 163846057}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0076855626, y: 0.17285672, z: 0.011608947}
+  m_Center: {x: 0.056066904, y: -0.12772012, z: 0.050349414}
+--- !u!54 &163846063
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 163846057}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &168235216
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +1030,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1928180894}
+  - {fileID: 1110702638}
   m_Father: {fileID: 1805543667}
   m_RootOrder: 0
 --- !u!114 &266907293
@@ -1159,8 +1195,8 @@ MonoBehaviour:
   leftHand: {fileID: 163846057}
   rightHandState: {fileID: 264517214}
   leftHandState: {fileID: 1326509056}
-  rightHandPos: {fileID: 122052991}
-  leftHandPos: {fileID: 1027562059}
+  rightHandPos: {fileID: 1215575430}
+  leftHandPos: {fileID: 1293902173}
   pageBlocks:
   - {fileID: 1938697361}
   - {fileID: 28606643}
@@ -2851,7 +2887,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 649003131}
-        m_MethodName: OnClick
+        m_MethodName: ChangeScaleState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2921,8 +2957,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 649003131}
-          m_MethodName: ChangeScaleState
+        - m_Target: {fileID: 649003134}
+          m_MethodName: Expand
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3108,7 +3144,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 659981921}
-        m_MethodName: OnClick
+        m_MethodName: MagneticState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3178,8 +3214,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 659981921}
-          m_MethodName: MagneticState
+        - m_Target: {fileID: 659981924}
+          m_MethodName: Expand
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3538,11 +3574,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1226953745}
   m_Script: {fileID: 11500000, guid: 9ea79be653ce14db8969d7225d95ec6c, type: 3}
---- !u!4 &1027562059 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000011820560600, guid: 2aa010a1e75292e49a24f3f71bb9cddb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1504484975}
 --- !u!1001 &1044851624
 Prefab:
   m_ObjectHideFlags: 0
@@ -3690,6 +3721,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792fcb57bc4dab049888cae823fb60b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1110702637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1110702638}
+  - 65: {fileID: 1110702639}
+  - 54: {fileID: 1110702640}
+  m_Layer: 0
+  m_Name: HandTarget
+  m_TagString: UITarget
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1110702638
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1110702637}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 266907292}
+  m_RootOrder: 1
+--- !u!65 &1110702639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1110702637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.07236242}
+  m_Center: {x: 0, y: 0, z: 0.12472439}
+--- !u!54 &1110702640
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1110702637}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!4 &1215575430 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 470044, guid: 2276723046d707c4f94d431ceb80ab92, type: 2}
+  m_PrefabInternal: {fileID: 163103842}
 --- !u!1001 &1226953745
 Prefab:
   m_ObjectHideFlags: 0
@@ -4684,6 +4776,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8515ebee271c0649b9db1321f3026a4, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1293902173 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000010751320272, guid: 2aa010a1e75292e49a24f3f71bb9cddb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1504484975}
 --- !u!1 &1326509054 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 196280, guid: 23f2cce114628a448bfeaae171b4c0c0, type: 2}

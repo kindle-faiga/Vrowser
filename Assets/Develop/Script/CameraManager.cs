@@ -31,7 +31,7 @@ namespace Leap.Unity
         }
 
         void Update()
-        {
+        {   /*
             if(buttonHand.activeSelf)
             {
                 float distance = Vector3.Distance(transform.position, buttonHand.transform.position);
@@ -46,6 +46,7 @@ namespace Leap.Unity
                     buttonManager.ResetButton();
                 }
             }
+            */
         }
     }
 }

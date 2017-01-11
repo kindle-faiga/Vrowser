@@ -25,7 +25,8 @@ public class ButtonManager : MonoBehaviour
         {
             isActive = true;
 
-            transform.localScale = defaultSize;
+            //transform.localScale = defaultSize;
+            iTween.ScaleTo(gameObject, defaultSize, 0.5f);
         }
     }
 
@@ -35,7 +36,8 @@ public class ButtonManager : MonoBehaviour
         {
             isActive = false;
 
-            transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            //transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            iTween.ScaleTo(gameObject, new Vector3(0.01f, 0.01f, 0.01f), 0.5f);
         }
     }
 }

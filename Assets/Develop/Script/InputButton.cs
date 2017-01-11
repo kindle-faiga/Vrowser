@@ -4,6 +4,8 @@ using System.Collections;
 
 public class InputButton : MonoBehaviour
 {
+    private CameraManager cameraManager;
+
     private BlockManager blockManager;
 
     private ButtonManager buttonManager;
@@ -11,6 +13,8 @@ public class InputButton : MonoBehaviour
     void Start()
     {
         blockManager = GameObject.Find("WebPageManager").GetComponent<BlockManager>();
+
+        cameraManager = GameObject.Find("CenterEyeAnchor").GetComponent<CameraManager>();
 
         buttonManager = transform.parent.GetComponent<ButtonManager>();
     }
@@ -39,6 +43,15 @@ public class InputButton : MonoBehaviour
         {
             Debug.Log("Button2 click!");
             blockManager.SetChangeScale();
+        }
+    }
+
+    public void ChangeSky()
+    {
+        if (buttonManager.IsActive())
+        {
+            Debug.Log("Button3 click!");
+            cameraManager.SetSkyBox();
         }
     }
 }

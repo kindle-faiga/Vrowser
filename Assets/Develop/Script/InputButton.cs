@@ -1,9 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using Leap.Unity;
 using System.Collections;
 
 public class InputButton : MonoBehaviour
 {
+    [SerializeField]
+    private Sprite defaultImage;
+
+    [SerializeField]
+    private Sprite changeImage;
+
     private CameraManager cameraManager;
 
     private BlockManager blockManager;
@@ -33,6 +40,16 @@ public class InputButton : MonoBehaviour
         if (buttonManager.IsActive())
         {
             Debug.Log("Button1 click!");
+
+            if(blockManager.GetMagnetic())
+            {
+                GetComponent<Image>().sprite = changeImage;
+            }
+            else
+            {
+                GetComponent<Image>().sprite = defaultImage;
+            }
+
             blockManager.SetMagnetic();
         }
     }
@@ -42,6 +59,16 @@ public class InputButton : MonoBehaviour
         if (buttonManager.IsActive())
         {
             Debug.Log("Button2 click!");
+
+            if (blockManager.GetChangeScale())
+            {
+                GetComponent<Image>().sprite = changeImage;
+            }
+            else
+            {
+                GetComponent<Image>().sprite = defaultImage;
+            }
+
             blockManager.SetChangeScale();
         }
     }

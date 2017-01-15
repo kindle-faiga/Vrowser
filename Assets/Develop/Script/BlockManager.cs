@@ -87,6 +87,16 @@ namespace Leap.Unity
             }
         }
 
+        public bool GetMagnetic()
+        {
+            return isMagnetic;
+        }
+
+        public bool GetChangeScale()
+        {
+            return isChangeScale;
+        }
+
         public void SetMagnetic()
         {
             isMagnetic = !isMagnetic;

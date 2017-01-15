@@ -11,6 +11,9 @@ public class InputButton : MonoBehaviour
     [SerializeField]
     private Sprite changeImage;
 
+    [SerializeField]
+    private LogSave logSave;
+
     private CameraManager cameraManager;
 
     private BlockManager blockManager;
@@ -31,6 +34,7 @@ public class InputButton : MonoBehaviour
         if (buttonManager.IsActive())
         {
             Debug.Log("Button click!");
+            logSave.logSave("Button : Reset");
             blockManager.ResetBlocks();
         }
     }
@@ -41,7 +45,9 @@ public class InputButton : MonoBehaviour
         {
             Debug.Log("Button1 click!");
 
-            if(blockManager.GetMagnetic())
+            logSave.logSave("Button : Magnet");
+
+            if (blockManager.GetMagnetic())
             {
                 GetComponent<Image>().sprite = changeImage;
             }
@@ -59,6 +65,8 @@ public class InputButton : MonoBehaviour
         if (buttonManager.IsActive())
         {
             Debug.Log("Button2 click!");
+
+            logSave.logSave("Button : Scale");
 
             if (blockManager.GetChangeScale())
             {
@@ -78,6 +86,7 @@ public class InputButton : MonoBehaviour
         if (buttonManager.IsActive())
         {
             Debug.Log("Button3 click!");
+            logSave.logSave("Button : BackGround");
             cameraManager.SetSkyBox();
         }
     }

@@ -24,6 +24,8 @@ namespace Leap.Unity
         private Transform leftHandPos;
         [SerializeField]
         private Transform[] pageBlocks;
+        [SerializeField]
+        private LogSave logSave;
         //private Quaternion rightRotation;
         //private Quaternion leftRotation;
         private PinchDetector pinchDetectorRight;
@@ -276,6 +278,7 @@ namespace Leap.Unity
                 {
                     if (rightHandState.GetBlock() == leftHandState.GetBlock())
                     {
+                        logSave.logSave("HandState : ChangeScale");
                         updateMode = (int)updateModes.ChangeScale;
                     }
                 }
@@ -327,6 +330,7 @@ namespace Leap.Unity
                 else
                 {
                     ChangeScale(dis);
+                    
                     if (!(pinchDetectorRight.IsPinching && pinchDetectorLeft.IsPinching)) //両手がピンチでなくなったらChangeScale modeを解除(条件を緩めてもいいかも)
                     {
                         updateMode = (int)updateModes.Default;
@@ -364,6 +368,7 @@ namespace Leap.Unity
 
             if (isMagnetic && pinchDetectorRight.IsPinching && !pinchDetectorLeft.IsPinching)
             {
+                logSave.logSave("HandState : MagneticForceRight");
                 iTween.MoveTo(blockState.gameObject, rightHand.transform.position, 2.5f);
             }
         }
@@ -374,6 +379,7 @@ namespace Leap.Unity
 
             if(isMagnetic && !pinchDetectorRight.IsPinching && pinchDetectorLeft.IsPinching)
             {
+                logSave.logSave("HandState : MagneticForceLeft");
                 iTween.MoveTo(blockState.gameObject, leftHand.transform.position, 2.5f);
             }
         }

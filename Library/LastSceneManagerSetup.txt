@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Develop/Scene/Tracking_Manual.unity
+- path: Assets/Develop/Scene/Tracking_Test.unity
   isLoaded: 1
   isActive: 1

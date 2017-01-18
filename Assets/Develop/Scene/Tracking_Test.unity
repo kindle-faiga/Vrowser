@@ -408,7 +408,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d355b46ce3d19d345a3dadfebe0347f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1333e7bbeebc66d42bba29070c1c39f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -478,7 +478,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d37d0436ca6920b48a3c9014850b3e69, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42278fd02c1312746965feeb9ee6e006, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -618,11 +618,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 11466626, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: greenMaterial
@@ -1125,7 +1125,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d355b46ce3d19d345a3dadfebe0347f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e31fa06e513b084884bf579de17b58c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1185,7 +1185,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1196,7 +1196,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Question 4\n\n\u3053\u3061\u3089\u306B\u554F\u984C\u304C\u8868\u793A\u3055\u308C\u307E\u3059\n\n\u3057\u3070\u3089\u304F\u304A\u307E\u3061\n\u304F\u3060\u3055\u3044"
+  m_Text: "Question 4\n\n\u30D0\u30FC\u30AC\u30FC\u30AD\u30F3\u30B0\u306E\n\u9ED2\u30D0\u30FC\u30AC\u30FC\n\u30CA\u30B2\u30C3\u30C8\u30BB\u30C3\u30C8\n\uFF08\u30B3\u30FC\u30E9)\n\u3092\u571F\u66DC\u65E5\u306B\u8CB7\u3063\u305F\u3089\n\u3044\u304F\u3089\u306B\u306A\u308B\uFF1F"
 --- !u!222 &177464351
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1434,7 +1434,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 308577316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8, y: 0.92, z: 0.81}
+  m_LocalPosition: {x: 0.701, y: 0.92, z: 0.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1852,7 +1852,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d37d0436ca6920b48a3c9014850b3e69, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e98177cb8aad38a489dd0667a51657aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3689,7 +3689,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d355b46ce3d19d345a3dadfebe0347f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5301cf8774ec4c044810f612f83faa05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3788,11 +3788,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 11466626, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: greenMaterial
@@ -4993,7 +4993,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -5004,7 +5004,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Question 2\n\n\u3053\u3061\u3089\u306B\u554F\u984C\u304C\u8868\u793A\u3055\u308C\u307E\u3059\n\n\u3057\u3070\u3089\u304F\u304A\u307E\u3061\n\u304F\u3060\u3055\u3044"
+  m_Text: "Question 2\n\n\u30ED\u30C3\u30C6\u30EA\u30A2\u3001\u30DE\u30AF\u30C9\u30CA\u30EB\u30C9\u3001\u30E2\u30B9\u30D0\u30FC\u30AC\u30FC\n\u3053\u306E\u4E2D\u3067\u706B\u66DC13:00\u306B\n\u30C1\u30FC\u30BA\u30D0\u30FC\u30AC\u30FC\u306E\u30DD\u30C6\u30C8M+\u30C9\u30EA\u30F3\u30AFM\u30BB\u30C3\u30C8\n\u304C\u6700\u3082\u5B89\u304F\u306A\u308B\u5E97\u306F?"
 --- !u!222 &1261606272
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5090,7 +5090,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d37d0436ca6920b48a3c9014850b3e69, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2bc2e76cf8f6a74d8eeec37e7f0f00c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5152,7 +5152,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d355b46ce3d19d345a3dadfebe0347f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c82421a84309d94bb92a70f4d06e69e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5679,11 +5679,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 11466626, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: greenMaterial
@@ -5750,7 +5750,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d37d0436ca6920b48a3c9014850b3e69, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f56b349fdcbfee44b2bbe1f9aa2b4af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5810,7 +5810,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -5821,7 +5821,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Question 5\n\n\u3053\u3061\u3089\u306B\u554F\u984C\u304C\u8868\u793A\u3055\u308C\u307E\u3059\n\n\u3057\u3070\u3089\u304F\u304A\u307E\u3061\n\u304F\u3060\u3055\u3044"
+  m_Text: "Question 5\n\n\u5168\u5E97\u8217\u306E\u30DD\u30C6\u30C8M\u30B5\u30A4\u30BA\u306E\u5024\u6BB5\u3092\u8DB3\u3059\u3068\n\u3044\u304F\u3089\u306B\u306A\u308B\uFF1F\n(\u5272\u5F15\u306F\u8003\u616E\u3057\u306A\u3044)"
 --- !u!222 &1631246483
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6045,11 +6045,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 11466626, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: greenMaterial
@@ -6296,7 +6296,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -6307,7 +6307,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Question 3\n\n\u3053\u3061\u3089\u306B\u554F\u984C\u304C\u8868\u793A\u3055\u308C\u307E\u3059\n\n\u3057\u3070\u3089\u304F\u304A\u307E\u3061\n\u304F\u3060\u3055\u3044"
+  m_Text: "Question 3\n\n\u6C34\u66DC\u65E5\u306B\u5272\u5F15\u304C\u3042\u308B\u5E97\u306F\u3044\u304F\u3064\u3042\u308B?"
 --- !u!222 &1832482770
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6670,11 +6670,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 11466626, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: greenMaterial
@@ -6743,7 +6743,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -6754,7 +6754,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Question 1\n\n\u3053\u3061\u3089\u306B\u554F\u984C\u304C\u8868\u793A\u3055\u308C\u307E\u3059\n\n\u3057\u3070\u3089\u304F\u304A\u307E\u3061\n\u304F\u3060\u3055\u3044"
+  m_Text: "Question 1\n\n\u5168\u5E97\u8217\u306E\u4E2D\u3067\n\u6700\u3082\u9AD8\u3044\u30C9\u30EA\u30F3\u30AF\u306E\n\u5E97\u540D\u3001\u5546\u54C1\u3001\u5024\u6BB5\u306F\uFF1F\n(\u5272\u5F15\u306F\u8003\u616E\u3057\u306A\u3044)"
 --- !u!222 &2096839382
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -766,11 +766,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 11466626, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: greenMaterial
@@ -1805,7 +1805,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 308577316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.56, y: 0.92, z: 0.81}
+  m_LocalPosition: {x: 0.696, y: 0.92, z: 0.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -4927,11 +4927,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 11466626, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: greenMaterial
@@ -6988,11 +6988,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 11466626, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: greenMaterial
@@ -7412,11 +7412,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 11466626, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: greenMaterial
@@ -8204,11 +8204,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 464726, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 11466626, guid: 749a9815acbf23f4b97c9fcfaffea0d8, type: 2}
       propertyPath: greenMaterial

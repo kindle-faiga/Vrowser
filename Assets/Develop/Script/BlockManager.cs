@@ -89,6 +89,46 @@ namespace Leap.Unity
             }
         }
 
+        public void FullResetBlocks()
+        {
+            updateMode = (int)updateModes.Default;
+
+            GameObject s1 = GameObject.Find("SmallBlock");
+
+            if(s1 != null)
+            {
+                s1.transform.parent = transform;
+            }
+
+            GameObject s2 = GameObject.Find("SmallBlock1");
+
+            if (s2 != null)
+            {
+                s2.transform.parent = transform;
+            }
+
+            GameObject s3 = GameObject.Find("SmallBlock2");
+
+            if (s3 != null)
+            {
+                s3.transform.parent = transform;
+            }
+
+            GameObject s4 = GameObject.Find("SmallBlock3");
+
+            if (s4 != null)
+            {
+                s4.transform.parent = transform;
+            }
+
+            GameObject s5 = GameObject.Find("SmallBlock4");
+
+            if (s5 != null)
+            {
+                s5.transform.parent = transform;
+            }
+        }
+
         public bool GetMagnetic()
         {
             return isMagnetic;
@@ -271,39 +311,37 @@ namespace Leap.Unity
                         {
                             AttractBlock(rightState == null,leftState == null, rot_r, rot_l);
                         }*/
-
-            if (pinchDetectorRight.IsPinching && pinchDetectorLeft.IsPinching) //両手がピンチ中ならChangeScale modeに
+            if (Input.GetKeyDown(KeyCode.Z))
             {
-                if(rightHandState.GetBlock() != null && leftHandState.GetBlock() != null)
-                {
-                    if (rightHandState.GetBlock() == leftHandState.GetBlock())
-                    {
-                        logSave.logSave("HandState : ChangeScale");
-                        updateMode = (int)updateModes.ChangeScale;
-                    }
-                }
+                FullResetBlocks();
             }
-            else
+
+            if (Input.GetKeyDown(KeyCode.A))
             {
-                if (!pinchDetectorRight.IsPinching && !pinchDetectorLeft.IsPinching)
+                GameObject h_r = GameObject.Find("RigidRoundHand_R(Clone)");
+                GameObject r_r = GameObject.Find("LoPoly_Rigged_Hand_Right(Clone)");
+                GameObject h_l = GameObject.Find("RigidRoundHand_L(Clone)");
+                GameObject r_l = GameObject.Find("LoPoly_Rigged_Hand_Left(Clone)");
+
+                if(h_r != null)
                 {
-                    updateMode = (int)updateModes.Default;
+                    Destroy(h_r);
                 }
 
-                if (!pinchDetectorRight.IsPinching)
+                if (r_r != null)
                 {
-                    if (rightHandState.GetBlock() != null)
-                    {
-                        rightHandState.GetBlock().transform.parent = null;
-                    }
+                    Destroy(r_r);
                 }
-                if (!pinchDetectorLeft.IsPinching)
+
+                if (h_l != null)
                 {
-                    if (leftHandState.GetBlock() != null)
-                    {
-                        leftHandState.GetBlock().transform.parent = null;
-                    }
-                } 
+                    Destroy(h_l);
+                }
+
+                if (r_l != null)
+                {
+                    Destroy(r_l);
+                }
             }
 
             if (updateMode == (int)updateModes.Default && (pinchDetectorLeft.DidStartPinch || pinchDetectorRight.DidStartPinch))
@@ -345,6 +383,41 @@ namespace Leap.Unity
             else if (updateMode == (int)updateModes.AttractBlock)
             {
                 AttractBlock(rightState == null, leftState == null, rot_r, rot_l);
+            }
+
+            //ヤバかったら一番上に
+            if (pinchDetectorRight.IsPinching && pinchDetectorLeft.IsPinching) //両手がピンチ中ならChangeScale modeに
+            {
+                if (rightHandState.GetBlock() != null && leftHandState.GetBlock() != null)
+                {
+                    if (rightHandState.GetBlock() == leftHandState.GetBlock())
+                    {
+                        logSave.logSave("HandState : ChangeScale");
+                        updateMode = (int)updateModes.ChangeScale;
+                    }
+                }
+            }
+            else
+            {
+                if (!pinchDetectorRight.IsPinching && !pinchDetectorLeft.IsPinching)
+                {
+                    updateMode = (int)updateModes.Default;
+                }
+
+                if (!pinchDetectorRight.IsPinching)
+                {
+                    if (rightHandState.GetBlock() != null)
+                    {
+                        rightHandState.GetBlock().transform.parent = null;
+                    }
+                }
+                if (!pinchDetectorLeft.IsPinching)
+                {
+                    if (leftHandState.GetBlock() != null)
+                    {
+                        leftHandState.GetBlock().transform.parent = null;
+                    }
+                }
             }
 
             distance = newDistance;
